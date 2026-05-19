@@ -1,3 +1,25 @@
+python3 -m light_malib.main_pbt --config /home/project/GRF_MARL/expr_configs/cooperative_MARL_benchmark/full_game/11_vs_11_hard/ippo.yaml
+CUDA_VISIBLE_DEVICES=1 python3 -m light_malib.main_pbt --config /home/project/GRF_MARL/expr_configs/cooperative_MARL_benchmark/full_game/11_vs_11_hard/mappo.yaml
+
+# 环境
+```
+conda create --name jidi --clone pymarl_clean
+conda install pytorch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1 pytorch-cuda=11.8 -c pytorch -c nvidia
+```
+
+# 训练
+```
+python3 -m light_malib.main_pbt --config /home/project/GRF_MARL/expr_configs/cooperative_MARL_benchmark/full_game/11_vs_11_hard/ippo.yaml
+python3 -m light_malib.main_pbt --config /home/project/GRF_MARL/expr_configs/cooperative_MARL_benchmark/full_game/11_vs_11_hard/mat.yaml
+```
+
+# 最优配置
+## 非psro
+mat 17
+mat 7
+## psro
+mat 17 psro 3 1
+mat 17 psro 3
 
 
 # Google Research Football Multi-Agent Reinforcement Learning Library (GRF MARL Lib)

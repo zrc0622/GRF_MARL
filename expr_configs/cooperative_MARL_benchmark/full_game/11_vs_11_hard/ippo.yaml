@@ -23,7 +23,7 @@ framework:
     type: "win_rate_stopper"
     kwargs:
       min_win_rate: 1.1
-      max_steps: 700          #iteration at each psro round
+      max_steps: 1000          #iteration at each psro round
 agent_manager:
   num_agents: 2
   share_policies: False
@@ -125,7 +125,7 @@ training_manager:
         - ["node:${distributed.nodes.master.ip}",0.01]
  
   master_addr: "127.0.0.1"
-  master_port:  "12774"
+  master_port:  "12778"
   local_queue_size: 1
   batch_size: ${rollout_manager.batch_size} # how many data sample from DatasetServer per time.
   num_prefetchers: 1
@@ -254,5 +254,5 @@ populations:
             - condition: "==0" # condition if True in order
               strategy: pretrained # now support pretrained, inherit_last, random
               policy_id: built_in
-              policy_dir: light_malib/trained_models/gr_football/11_vs_11/built_in
+              policy_dir: light_malib/trained_models/gr_football/5_vs_5/built_in
           initial_policies:                         #initial population

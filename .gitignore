@@ -1,5 +1,6 @@
 temp/
 /expr_log
+/tmp_logs
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
